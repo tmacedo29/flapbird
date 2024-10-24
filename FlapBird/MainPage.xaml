@@ -54,8 +54,8 @@
     <Image x:Name="imgChao"
            Source="chao.png"
            Margin="0"
-           HeightRequest="150"
-           Aspect="AspectFill"
+           HeightRequest="50"
+           Aspect="Fill"
            HorizontalOptions="Fill"
            VerticalOptions="End"/>
 
