@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FlapBird.MainPage"
+             Shell.NavBarIsVisible="False"
+             Padding="0"
+             BackgroundColor="White">
+  <Grid Margin="0"
+        Padding="0">
+    <Grid.GestureRecognizers>
+      <TapGestureRecognizer Tapped="OnGridClicked"/>
+    </Grid.GestureRecognizers>
+    <Image Source="fundo.jpg"
+           Aspect="AspectFill"
+           Margin="0"
+           HorizontalOptions="Fill"
+           VerticalOptions="Fill"/>
+
+    <Image x:Name="imgPardal"
+           Source="pardal.png"
+           Aspect="AspectFit"
+           Margin="20,0,0,0"
+           HeightRequest="50"
+           WidthRequest="50"
+           HorizontalOptions="Start"
+           VerticalOptions="Center"/>
+
+    <Image x:Name="imgCanoCima"
+           Source="cano_cima.png"
+           Margin="0, 0, 0, 0"
+           Aspect="Fill"
+           HeightRequest="620"
+           WidthRequest="50"
+           HorizontalOptions="End"
+           VerticalOptions="Start"/>
+
+    <Image x:Name="imgCanoBaixo"
+           Source="cano_baixo.png"
+           Margin="0,0,0,20"
+           Aspect="Fill"
+           HeightRequest="620"
+           WidthRequest="50"
+           HorizontalOptions="End"
+           VerticalOptions="Start"/>
+
+    <Label x:Name="labelScore"
+           Text="Score: 00000"
+           FontSize="30"
+           Margin="0,20,20,0"
+           FontFamily="slkscre"
+           VerticalOptions="Start"
+           HorizontalOptions="End"/>
+    
+    <Image x:Name="imgChao"
+           Source="chao.png"
+           Margin="0"
+           HeightRequest="150"
+           Aspect="AspectFill"
+           HorizontalOptions="Fill"
+           VerticalOptions="End"/>
+
+    <Frame x:Name="frameOverlay"
+           BackgroundColor="#77000000"
+           HorizontalOptions="Fill"
+           VerticalOptions="Fill">
+      <Frame.GestureRecognizers>
+        <TapGestureRecognizer Tapped="OnFrameClicked"/>
+      </Frame.GestureRecognizers>
+      <VerticalStackLayout VerticalOptions="Center">
+        <Label x:Name="labelGameOverScore"
+              Text="Score: 00000"
+              FontSize="30"
+              Margin="0,20,20,0"
+              FontFamily="slkscre"
+              VerticalOptions="Start"
+              HorizontalOptions="Center"
+              HorizontalTextAlignment="Center"/>
+        <Image Source="tap.png"
+               Aspect="AspectFit"
+               Margin="0,200,0,0"
+               HeightRequest="150"
+               WidthRequest="300"/>
+      </VerticalStackLayout>
+    </Frame>
+  </Grid>
+
+</ContentPage>
