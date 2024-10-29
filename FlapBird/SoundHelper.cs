@@ -11,8 +11,8 @@ public class SoundHelper
   {
     Task.Run(async () =>
     {
-      var morteFX = await FileSystem.OpenAppPackageFileAsync(nomeArquivoWav);
-      var audioPlayer = AudioManager.Current.CreatePlayer(morteFX);
+      var audioFX = await FileSystem.OpenAppPackageFileAsync(nomeArquivoWav);
+      var audioPlayer = AudioManager.Current.CreatePlayer(audioFX);
       audioPlayer.Play();
     });
   }
